@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GTÜ İKT201 Mikroiktisat I — İnteraktif Ders, Uygulama &amp; Simülasyon Laboratuvarı</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- TOP EDITORIAL HEADER -->
+  <header class="top-header">
+    <div class="brand-block">
+      <div class="brand-kicker">GEBZE TEKNİK ÜNİVERSİTESİ • İKTİSAT BÖLÜMÜ • İKT201</div>
+      <div class="brand-title">Mikroiktisat I — İnteraktif Tüketici Teorisi Laboratuvarı</div>
+      <div class="brand-subtitle">21 Sayfalık Ders (1–12) &amp; Uygulama (1–9) Notları • 4 Canlı SVG Simülatör • 5 Kritik Sınav Tuzağı</div>
+    </div>
+
+    <div class="header-actions">
+      <button class="mode-btn active" data-mode="modules">📚 Ders Modülleri</button>
+      <button class="mode-btn" data-mode="simulators">🎛️ Canlı Simülatörler</button>
+      <button class="mode-btn" data-mode="practice">🧪 Uygulama &amp; Çözücü (10)</button>
+      <button class="mode-btn" data-mode="critiques">🚨 Sınav Tuzakları (5)</button>
+      <button class="mode-btn" data-mode="quiz">📝 Kavram Testi (15)</button>
+    </div>
+  </header>
+
+  <!-- WORKSPACE GRID -->
+  <div class="workspace-grid">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+      <div>
+        <div class="sidebar-section-title">DERS MODÜLLERİ (SAYFA 1–12)</div>
+        <nav class="chapter-nav" id="module-nav"></nav>
+      </div>
+
+      <div class="sidebar-shortcuts">
+        <div class="sidebar-section-title">HIZLI ERİŞİM</div>
+        <button class="shortcut-btn" data-jump="simulators">🎛️ 4 İnteraktif SVG Laboratuvarı</button>
+        <button class="shortcut-btn" data-jump="practice">🧪 5 Kademeli İpucu Kampı</button>
+        <button class="shortcut-btn" data-jump="critiques">🚨 5 Gerçek Eleştiri &amp; Düzeltme</button>
+        <button class="shortcut-btn" data-jump="quiz">📝 15 Soruluk Sınav Simülasyonu</button>
+      </div>
+
+      <div class="progress-box">
+        <div class="progress-label">
+          <span>Uygulama İlerlemesi</span>
+          <span id="progress-text">0 / 10 Problem (%0)</span>
+        </div>
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progress-fill"></div>
+        </div>
+        <div class="progress-sub" id="quiz-progress-text">Sınav Testi: 0 / 15 Doğru</div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT STAGE -->
+    <main class="main-stage" id="main-stage"></main>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
